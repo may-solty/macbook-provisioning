@@ -4,6 +4,7 @@
 packages:
   - { name: adobe-creative-cloud, state: present }
   - { name: alfred, state: present }
+  - { name: alt-tab, state: present }
   - { name: appcleaner, state: present }
   - { name: bartender, state: present }
   - { name: blisk, state: present }
@@ -20,19 +21,21 @@ packages:
   - { name: github, state: present }
   - { name: gitup, state: present }
   - { name: google-chrome, state: present }
-  - { name: hyperswitch, state: present }
+  # - { name: hyperswitch, state: present }
   - { name: iterm2, state: present }
   - { name: mamp, state: present } # Need Password
-  - { name: mysqlworkbench, state: present }
+  # - { name: mysqlworkbench, state: present }
   - { name: postman, state: present }
+  - { name: raycast, state: present }
   - { name: rubymine, state: present }
   - { name: sequel-pro, state: present }
-  - { name: skype, state: present }
+  # - { name: skype, state: present }
   - { name: slack, state: present }
   - { name: sourcetree, state: present }
   - { name: vagrant, state: present }
   - { name: vagrant-manager, state: present }
   - { name: visual-studio-code, state: present }
+  - { name: warp, state: present }
 
 fonts:
   - { name: font-ricty-diminished }

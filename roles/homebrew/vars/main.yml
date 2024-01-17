@@ -14,7 +14,7 @@ packages:
   - { name: jq, state: present }
   - { name: mas, state: present }
   - { name: peco, state: present }
-  - { name: rmtrash, state: present }
+  # - { name: rmtrash, state: present }
   - { name: sl, state: present }
   - { name: tree, state: present }
   - { name: vim, state: present }

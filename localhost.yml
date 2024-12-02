@@ -1,0 +1,74 @@
+- hosts: localhost
+  connection: local
+  gather_facts: false
+  tasks:
+    - name: Update the Homebrew
+      homebrew:
+        update_homebrew: yes
+        upgrade_all: yes
+
+    - name: Install Homebrew packages
+      homebrew:
+        name: "{{ item.name }}"
+        state: "{{ item.state | default('present') }}"
+      with_items: "{{ homebrew_packages }}"
+
+    - name: Install Homebrew Cask packages
+      homebrew_cask:
+        name: "{{ item.name }}"
+        state: "{{ item.state | default('present') }}"
+      with_items: "{{ homebrew_cask_packages }}"
+
+    - name: Install Homebrew Fonts
+      homebrew_cask:
+        name: "{{ item.name }}"
+        state: "{{ item.state | default('present') }}"
+      with_items: "{{ homebrew_fonts }}"
+
+    - name: Install Mac Apps
+      shell: "mas install {{ item.id }}"
+      with_items: "{{ mas_apps }}"
+  vars:
+    apple: { id: style.lpolvues+apple@gmail.com }
+    homebrew_packages:
+      - { name: awscli }
+      - { name: fish }
+      - { name: ghq }
+      - { name: mas }
+      - { name: peco }
+      - { name: tree }
+    homebrew_cask_packages:
+      - { name: 1password }
+      - { name: adobe-creative-cloud }
+      - { name: alfred }
+      - { name: appcleaner }
+      - { name: arc }
+      - { name: clipy }
+      - { name: cmd-eikana }
+      - { name: discord }
+      - { name: docker }
+      - { name: dropbox }
+      - { name: firefox }
+      - { name: github }
+      - { name: gitup }
+      - { name: google-chrome }
+      - { name: iterm2 }
+      - { name: jetbrains-toolbox }
+      - { name: medis }
+      - { name: messenger }
+      - { name: sequel-ace }
+      - { name: slack }
+      - { name: tableplus }
+      - { name: the-unarchiver }
+      - { name: visual-studio-code }
+      - { name: zoom }
+    homebrew_fonts:
+      - { name: font-ricty-diminished }
+    mas_apps:
+      - { id: 768053424, name: Gapplin }
+      - { id: 441258766, name: Magn } # Magnet
+      - { id: 1429033973, name: RunCat }
+      # - { id: 410479438, name: Tab Notes Free }
+      - { id: 955848755, name: Theine }
+      # - { id: 414855915, name: WinArchiver Lite }
+      # - { id: 497799835, name: Xco } # Xcode

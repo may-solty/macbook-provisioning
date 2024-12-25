@@ -37,7 +37,9 @@ ansible-playbook -i hosts localhost.yml
     シンプルでインタラクティブなフィルターツール
 
 
-## Fish のインストール
+## 3. 開発関連の準備
+
+### Fish
 terminalで操作する。
 
 ```shell
@@ -60,11 +62,9 @@ omf install peco
 omf install z
 ```
 
-### ssh
-
+### dotfiles
 ```shell
-mkdir .ssh
-chmod 700 .ssh/
+sh dotfiles/link.sh
 ```
 
 ### git
@@ -73,3 +73,14 @@ chmod 700 .ssh/
 git config --global user.name "YOUR_NAME"
 git config --global user.email "YOUR_EMAIL"
 ```
+
+### 別途必要になり追加してもの
+
+#### JMeter
+```shell
+brew install jmeter
+```
+
+#### Stillcolor
+M4のMacを使用しているとモニターにちらつきが発生するので、民間療法で以下をインストール  
+https://github.com/aiaf/Stillcolor

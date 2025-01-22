@@ -52,6 +52,7 @@
       - { name: github }
       - { name: gitup }
       - { name: google-chrome }
+      - { name: insta360-studio }
       - { name: iterm2 }
       - { name: jetbrains-toolbox }
       - { name: medis }

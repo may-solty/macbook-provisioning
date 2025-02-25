@@ -55,6 +55,7 @@
       - { name: insta360-studio }
       - { name: iterm2 }
       - { name: jetbrains-toolbox }
+      - { name: linear-linear }
       - { name: medis }
       - { name: messenger }
       - { name: sequel-ace }

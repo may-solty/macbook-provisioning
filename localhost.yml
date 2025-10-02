@@ -58,6 +58,7 @@
       - { name: linear-linear }
       - { name: medis }
       - { name: messenger }
+      - { name: microsoft-edge }
       - { name: sequel-ace }
       - { name: slack }
       - { name: tableplus }
@@ -68,6 +69,7 @@
       - { name: font-ricty-diminished }
     mas_apps:
       - { id: 768053424, name: Gapplin }
+      - { id: 539883307, name: LINE }
       - { id: 441258766, name: Magn } # Magnet
       - { id: 1429033973, name: RunCat }
       # - { id: 410479438, name: Tab Notes Free }

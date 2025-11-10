@@ -57,7 +57,6 @@
       - { name: jetbrains-toolbox }
       - { name: linear-linear }
       - { name: medis }
-      - { name: messenger }
       - { name: microsoft-edge }
       - { name: sequel-ace }
       - { name: slack }
